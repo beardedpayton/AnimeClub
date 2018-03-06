@@ -13,9 +13,7 @@ import AnimeServices from '@/services/AnimeServices'
 export default {
   data () {
     return {
-      singleTitle: null,
-      tabs: ['Summary', 'Episodes', 'Characters'],
-      text: 'test'
+      singleTitle: null
     }
   },
   async mounted () {

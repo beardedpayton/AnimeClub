@@ -1,7 +1,8 @@
 <template>
   <section>
     <v-layout>
-      <h1>test</h1>
+      <v-flex xs12>
+      </v-flex>
     </v-layout>
   </section>
 </template>
@@ -12,7 +13,9 @@ import AnimeServices from '@/services/AnimeServices'
 export default {
   data () {
     return {
-      singleTitle: null
+      singleTitle: null,
+      tabs: ['Summary', 'Episodes', 'Characters'],
+      text: 'test'
     }
   },
   async mounted () {

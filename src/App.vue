@@ -15,6 +15,9 @@ export default {
 </script>
 
 <style>
+#app {
+  background-color: #f2f2f2;
+}
 section {
   padding: 50px 0;
 }

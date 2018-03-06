@@ -1,14 +1,14 @@
 <template>
-  <section id="trending">
+  <section>
     <div>
       <h1>Trending Anime</h1>
       <v-layout row wrap>
         <v-flex xs3 v-for="anime in trending" :key="anime.id">
           <router-link :to="{ name: 'anime-detail', params: { id: anime.id }}">
-          <div class="title-wrapper">
-            <img :src="anime.attributes.posterImage.medium" :alt="anime.attributes.canonicalTitle">
-            <h4>{{ anime.attributes.canonicalTitle }}</h4>
-          </div>
+            <div class="title-wrapper">
+              <img :src="anime.attributes.posterImage.medium" :alt="anime.attributes.canonicalTitle">
+              <h4>{{ anime.attributes.canonicalTitle }}</h4>
+            </div>
           </router-link>
         </v-flex>
       </v-layout>
@@ -26,6 +26,8 @@ export default {
       trending: null
     }
   },
+  methods: {
+  },
   async mounted () {
     this.trending = (await AnimeServices.trending()).data.data
   }
@@ -33,11 +35,30 @@ export default {
 </script>
 
 <style scoped>
-#trending img {
+section {
+  text-align: center;
+}
+img {
   width: 90%;
 }
-.title-wrapper h4 {
-  margin-bottom: 25px;
+h1 {
+  text-align: left;
+  margin-bottom: 50px;
 }
-
+a {
+  text-decoration: none;
+  color: black;
+}
+.title-wrapper {
+  background-color: #fff;
+  padding: 15px;
+  width: 90%;
+  margin-bottom: 50px;
+  cursor: pointer;
+  transition: .4s;
+}
+.title-wrapper:hover {
+  box-shadow: 0 0 10px #737373;
+  transform: scale(1.1);
+}
 </style>

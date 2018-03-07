@@ -8,6 +8,7 @@
             <div class="title-wrapper">
               <img :src="anime.attributes.posterImage.medium" :alt="anime.attributes.canonicalTitle">
               <h4>{{ anime.attributes.canonicalTitle }}</h4>
+              <span>Start Date: {{ anime.attributes.startDate}}</span>
             </div>
           </router-link>
         </v-flex>
@@ -25,8 +26,6 @@ export default {
     return {
       trending: null
     }
-  },
-  methods: {
   },
   async mounted () {
     this.trending = (await AnimeServices.trending()).data.data
@@ -50,6 +49,7 @@ a {
   color: black;
 }
 .title-wrapper {
+  margin: 0 auto;
   background-color: #fff;
   padding: 15px;
   width: 90%;

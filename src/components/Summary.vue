@@ -2,13 +2,17 @@
   <v-layout>
     <v-flex xs4>
       <div class="poster-img">
-        <img :src="summaryData.attributes.posterImage.small" alt="">
+        <img
+          :src="summaryData.posterImage.small"
+          :alt="summaryData.canonicalTitle"
+        >
       </div>
     </v-flex>
     <v-flex xs6>
       <div class="synopsis">
-        <h2>{{ summaryData.attributes.canonicalTitle }}</h2>
-        <p>{{ summaryData.attributes.synopsis }}</p>
+        <h2>{{ summaryData.canonicalTitle }}</h2>
+        <p>{{ summaryData.synopsis }}</p>
+        <p>Age Rating: {{summaryData.ageRating}} - {{summaryData.ageRatingGuide}} </p>
       </div>
     </v-flex>
   </v-layout>
@@ -28,6 +32,6 @@ export default {
   text-align: center;
 }
 .synopsis {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 </style>

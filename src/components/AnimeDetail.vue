@@ -1,21 +1,24 @@
 <template>
-  <section>
-  <header 
-    :style="{backgroundImage: 'url(' + background + ')', height: 350 + 'px'}" 
+  <section class="anime-detail">
+  <header
+    :style="{backgroundImage: 'url(' + background + ')', height: 350 + 'px'}"
     class="cover-photo"
   >
   </header>
-  <Summary :summaryData="singleTitle"/>
+  <Summary :summaryData="singleTitle.attributes"/>
+  <Details :detailData="singleTitle.attributes"/>
   </section>
 </template>
 
 <script>
 import AnimeServices from '@/services/AnimeServices'
 import Summary from '@/components/Summary'
+import Details from '@/components/Details'
 
 export default {
   components: {
-    Summary
+    Summary, 
+    Details
   },
   data () {
     return {
@@ -32,7 +35,7 @@ export default {
 </script>
 
 <style scoped>
-section {
+.anime-detail {
   position: relative;
   padding: 0;
 }

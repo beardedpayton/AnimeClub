@@ -41,7 +41,6 @@ img {
   width: 90%;
 }
 h1 {
-  text-align: left;
   margin-bottom: 50px;
 }
 a {

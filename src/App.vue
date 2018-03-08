@@ -17,6 +17,7 @@ export default {
 <style>
 #app {
   font-family: 'Roboto', sans-serif;
+  font-size: 18px;
   background-color: #f2f2f2;
 }
 h1,

@@ -6,19 +6,19 @@
   >
   </header>
   <Summary :summaryData="singleTitle.attributes"/>
-  <Details :detailData="singleTitle.attributes"/>
+  <Video :trailer="singleTitle.attributes.youtubeVideoId"/>
   </section>
 </template>
 
 <script>
 import AnimeServices from '@/services/AnimeServices'
 import Summary from '@/components/Summary'
-import Details from '@/components/Details'
+import Video from '@/components/Video'
 
 export default {
   components: {
     Summary, 
-    Details
+    Video
   },
   data () {
     return {

@@ -15,6 +15,9 @@ export default {
 </script>
 
 <style>
+.container {
+  padding: 0;
+}
 #app {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;

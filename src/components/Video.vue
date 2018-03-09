@@ -3,7 +3,7 @@
     <v-layout>
       <v-flex xs6>
         <div class="trailer">
-          <youtube :video-id="detailData.youtubeVideoId"></youtube>
+          <youtube :video-id="trailer"></youtube>
         </div>
       </v-flex>
     </v-layout>
@@ -12,8 +12,8 @@
 
 <script>
 export default {
-  name: 'Details',
-  props: ['detailData']
+  name: 'Video',
+  props: ['trailer']
 }
 </script>
 

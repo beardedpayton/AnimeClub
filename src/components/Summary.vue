@@ -1,20 +1,20 @@
 <template>
-  <v-layout>
-    <v-flex xs4>
+  <v-layout row wrap>
+    <v-flex md4 sm6>
       <div class="poster-img">
         <img
           :src="summaryData.posterImage.small"
           :alt="summaryData.canonicalTitle"
         >
       </div>
-    </v-flex>
-    <v-flex xs4>
+      </v-flex>
+    <v-flex md4 sm6>
       <div class="synopsis">
         <h2>{{ summaryData.canonicalTitle }}</h2>
         <p>{{ summaryData.synopsis }}</p>
       </div>
     </v-flex>
-    <v-flex xs3>
+    <v-flex md3>
       <div class="details">
         <h4>Anime Details</h4>
         <ul>
@@ -56,5 +56,10 @@ export default {
 }
 .details ul {
   list-style-type: none;
+}
+@media (max-width: 599px) {
+  .poster-img {
+    display: none;
+  }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <section class="anime-detail">
   <header
-    :style="{backgroundImage: 'url(' + background + ')', height: 350 + 'px'}"
+    :style="{backgroundImage: 'url(' + background + ')', height: 400 + 'px'}"
     class="cover-photo"
   >
   </header>
